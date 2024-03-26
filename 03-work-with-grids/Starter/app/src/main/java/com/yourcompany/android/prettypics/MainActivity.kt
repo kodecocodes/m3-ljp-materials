@@ -74,14 +74,5 @@ class MainActivity : ComponentActivity() {
 fun PhotoGrid() {
     val viewModel: MainViewModel = viewModel()
     val state by viewModel.state.observeAsState(emptyList())
-    LazyVerticalGrid(
-        columns = GridCells.Adaptive(80.dp),
-        modifier = Modifier.fillMaxSize(),
-        horizontalArrangement = Arrangement.spacedBy(4.dp),
-        verticalArrangement = Arrangement.spacedBy(4.dp)
-    ) {
-        items(state) { photo ->
-            PhotoItem(photo)
-        }
-    }
+    //TODO build a grid using PhotoItem component
 }
