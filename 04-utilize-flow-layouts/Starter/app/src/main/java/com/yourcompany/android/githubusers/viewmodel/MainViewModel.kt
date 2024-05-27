@@ -61,7 +61,7 @@ class MainViewModel @Inject constructor(private val repository: Repository) : Vi
 
         val requests = result.map { repo ->
             viewModelScope.async(Dispatchers.IO) {
-                val languages = repository.getLanguages(repo.languagesURL)
+                val languages = repository.getLanguages(repo.languagesURL).entries.take(5).associate { it.toPair() }
                 repo.languages = languages
                 repo
             }
