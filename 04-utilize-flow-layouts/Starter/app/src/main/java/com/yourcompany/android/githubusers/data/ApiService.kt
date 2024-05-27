@@ -30,7 +30,6 @@
 
 package com.yourcompany.android.githubusers.data
 
-import com.google.gson.JsonObject
 import com.yourcompany.android.githubusers.model.GitHubRepository
 import retrofit2.http.GET
 import retrofit2.http.Url

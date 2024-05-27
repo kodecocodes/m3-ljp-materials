@@ -55,7 +55,6 @@ fastlane/test_output
 fastlane/readme.md
 
 # Custom
-.idea/vcs.xml
 .idea/misc.xml
 .idea/modules.xml
 

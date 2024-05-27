@@ -55,7 +55,6 @@ fastlane/test_output
 fastlane/readme.md
 
 # Custom
-.idea/vcs.xml
 .idea/misc.xml
 .idea/modules.xml
 
@@ -72,7 +71,7 @@ Thumbs.db
 *.iml
 *.ipr
 *.iws
-/.idea/*
+.idea/*
 
 # IDEA/Android Studio Ignore exceptions
 !/.idea/vcs.xml
