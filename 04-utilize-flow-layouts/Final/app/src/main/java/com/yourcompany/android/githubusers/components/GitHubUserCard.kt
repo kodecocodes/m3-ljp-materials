@@ -2,9 +2,9 @@
 
 package com.yourcompany.android.githubusers.components
 
-import android.content.res.Configuration
 import android.content.res.Configuration.UI_MODE_NIGHT_NO
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -22,12 +22,11 @@ import androidx.compose.material.Chip
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
@@ -74,7 +73,9 @@ fun GitHubRepoCard(repo: GitHubRepository) {
                 }
                 Spacer(modifier = Modifier.height(8.dp))
 
-                FlowRow(modifier = Modifier.padding(8.dp), horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                FlowRow(
+                    modifier = Modifier.padding(8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                     repo.languages.forEach { (language, _) ->
                         Chip(onClick = {}) {
                             Text(text = language, textAlign = TextAlign.Start, maxLines = 1)
@@ -108,7 +109,7 @@ fun PreviewGitHubRepoCard() {
                 description = "A sample app to showcase Jetpack Compose",
                 htmlUrl = "www.github.com/kodecocodes",
                 languagesURL = "www.github.com/kodecocodes",
-                languages = emptyMap(),
+                languages = mapOf("Kotlin" to 1000, "Java" to 500, "Swift" to 200, "Dart" to 100, "Python" to 50),
                 stargazersCount = 1000,
                 owner = Owner(
                     id = 1,
